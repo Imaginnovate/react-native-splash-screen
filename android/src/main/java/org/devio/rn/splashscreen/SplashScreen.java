@@ -2,7 +2,9 @@ package org.devio.rn.splashscreen;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.graphics.Typeface;
 import android.os.Build;
+import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
 
@@ -30,6 +32,9 @@ public class SplashScreen {
                 if (!activity.isFinishing()) {
                     mSplashDialog = new Dialog(activity, themeResId);
                     mSplashDialog.setContentView(R.layout.launch_screen);
+                    TextView bottomText = mSplashDialog.findViewById(R.id.copyRightText);
+                    Typeface custom_font = Typeface.createFromAsset(mSplashDialog.getContext().getAssets(), "fonts/JosefinSans-Regular.ttf");
+                    bottomText.setTypeface(custom_font);
                     mSplashDialog.setCancelable(false);
 
                     if (!mSplashDialog.isShowing()) {

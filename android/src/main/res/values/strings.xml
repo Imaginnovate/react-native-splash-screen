@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SplashScreen</string>
+    <string name="copyright"> © 2018 Quiltful, Inc. All rights reserved.</string>
 </resources>
